@@ -1,0 +1,19 @@
+{
+    "name": "vendor/gen-pdf",
+    "description": "generation pdf twig/dompdf",
+    "autoload": {
+        "psr-4": {
+            "Vendor\\GenPdf\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Cazenave Vincent",
+            "email": "65124142+VincentCazenave@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "dompdf/dompdf": "^2.0",
+        "twig/twig": "^3.5"
+    }
+}
