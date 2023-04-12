@@ -3,6 +3,7 @@
 require_once 'vendor/autoload.php';
 
 use Dompdf\Dompdf;
+use Dompdf\Options;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 
@@ -15,7 +16,11 @@ $html = $twig->render('test.html.twig', [
 ]);
 
 // Instantiate and use the Dompdf class
+$options = new Options();
+$options->setChroot('');
+
 $dompdf = new Dompdf();
+$dompdf->setOptions($options);
 $dompdf->loadHtml($html);
 $dompdf->setPaper('A4', 'portrait');
 $dompdf->render();
